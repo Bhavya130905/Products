@@ -1,0 +1,96 @@
+body {
+    background-image: linear-gradient(90deg, #33b7e2, #5e62b0, #dc307c);
+}
+.cool-gradient-card {
+            position: relative;
+            background-color: #fff;
+            border: none;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px rgba(58, 20, 111, 0.20);
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            background-clip: padding-box;
+            transition: 
+                transform 0.3s cubic-bezier(.4,2,.3,1),
+                box-shadow 0.3s cubic-bezier(.4,2,.3,1);
+        }
+        .cool-gradient-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 16px 48px 0 rgba(186, 22, 227, 0.25), 0 1.5px 10px rgba(19,210,159,0.10);
+        }
+        .cool-gradient-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.07);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .card-img-top {
+            width: 300;
+            height: 300px;
+            border-radius: 2rem 2rem 0 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        }
+        .product-title {
+            font-weight: 700;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            z-index: 2;
+            position: relative;
+        }
+        .product-category {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            z-index: 2;
+            position: relative;
+        }
+        .product-price {
+            color: #fff;
+            background: rgba(19,210,159,0.85);
+            padding: 0.4rem 1.2rem;
+            border-radius: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 1rem auto 0.5rem auto;
+            box-shadow: 0 2px 8px rgba(19,210,159,0.12);
+            z-index: 2;
+            position: relative;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            z-index: 2;
+            position: relative;
+        }
+        .product-rating .star {
+            color: #ffe066;
+            font-size: 1.5rem;
+            margin-right: 0.3rem;
+        }
+        .card-text {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            z-index: 2;
+            position: relative;
+        }
+        @media (max-width: 576px) {
+            .cool-gradient-card {
+                border-radius: 1rem;
+            }
+            .card-img-top {
+                height: 180px;
+                border-radius: 1rem 1rem 0 0;
+            }
+            .product-title {
+                font-size: 1.5rem;
+            }
+        }
